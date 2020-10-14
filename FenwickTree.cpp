@@ -4,7 +4,7 @@ using namespace std;
 class FenwickTree
 {
     //(one based indexing)
-    // Refrence:- https://www.youtube.com/watch?v=CWDQJGaN1gY , cpalgorithms
+    // Refrence:- https://www.youtube.com/watch?v=CWDQJGaN1gY , cpalgorithms.
 
     private:
     ll n;
