@@ -5,12 +5,10 @@ using namespace std;
 
 class Graph
 {
-    private:
-    vector<vector<ll>> g;
-    vector<ll> visited,in,out,Flattree;
-    ll n,timer;
     public:
-    vector<ll> nodeweight;
+    vector<vector<ll>> g;
+    vector<ll> visited,in,out,Flattree,nodeweight;
+    ll n,timer;
     Graph(ll n)
     {
         this->n=n;
