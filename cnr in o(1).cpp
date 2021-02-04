@@ -26,14 +26,14 @@ int naturalNumInverse[N + 1];
 int fact[N + 1];
 
 // Function to precompute inverse of numbers
-void InverseofNumber(int p)
+void InverseofNumber(int p = mod)
 {
     naturalNumInverse[0] = naturalNumInverse[1] = 1;
     for (int i = 2; i <= N; i++)
         naturalNumInverse[i] = naturalNumInverse[p % i] * (p - p / i) % p;
 }
 // Function to precompute inverse of factorials
-void InverseofFactorial(int p)
+void InverseofFactorial(int p = mod)
 {
     factorialNumInverse[0] = factorialNumInverse[1] = 1;
 
@@ -43,7 +43,7 @@ void InverseofFactorial(int p)
 }
 
 // Function to calculate factorial of 1 to N
-void factorial(int p)
+void factorial(int p = mod)
 {
     fact[0] = 1;
 
@@ -55,15 +55,15 @@ void factorial(int p)
 }
 
 // Function to return nCr % p in O(1) time
-int ncr(int N, int R, int p)
+int ncr(int no, int r, int p = mod)
 {
     // n C r = n!*inverse(r!)*inverse((n-r)!)
-    if (N < R)
+    if (no < r)
         return 0;
     // Base case
-    if (R == 0)
+    if (r == 0)
         return 1;
-    int ans = ((fact[N] * factorialNumInverse[R]) % p * factorialNumInverse[N - R]) % p;
+    int ans = ((fact[no] * factorialNumInverse[r]) % p * factorialNumInverse[no - r]) % p;
     return ans;
 }
 
@@ -75,7 +75,7 @@ void solve()
     InverseofFactorial(mod);
     factorial(mod);
 
-    cout << ncr(5, 2, mod);
+    cout << ncr(5, 2);
 
     return;
 }
