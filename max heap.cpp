@@ -30,11 +30,11 @@ void build_max_heap(int a[])
 
 int extract_max(int a[])
 {
-	int mx = a[0];
 	if (n < 1)
 	{
 		return INT_MIN;
 	}
+	int mx = a[0];
 	a[0] = a[n - 1];
 	n--;
 	heapify(a, 0);

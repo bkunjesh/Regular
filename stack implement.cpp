@@ -44,8 +44,6 @@ public:
 		if (head == NULL) return INT_MIN;
 		return head->data;
 	}
-
-
 };
 
 int main()

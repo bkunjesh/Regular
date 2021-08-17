@@ -54,6 +54,7 @@ void solve()
 
     string s;
     cin >> s;
+    // s = "hhihh";
     auto pi = prefix_function(s);
     n = s.size();
     if (pi[n - 1] == 0)

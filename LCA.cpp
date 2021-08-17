@@ -85,3 +85,6 @@ int getlca(int a, int b)
     }
     return lca[a][0];
 }
+
+
+

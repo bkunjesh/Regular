@@ -20,13 +20,13 @@ void merge(int a[], int l, int m, int r)
 		else
 		{
 			a[k++] = right[j++];
-		}
+		} 
 	}
 	while (i < n1) a[k++] = left[i++];
 	while (j < n2) a[k++] = right[j++];
 
 
-}
+}  
 void split(int a[], int l, int r)
 {
 	if (r - l < 1) return ;
